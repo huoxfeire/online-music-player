@@ -1,0 +1,15 @@
+<!--获取所有的榜单-->
+<ul class="rankLists">
+    <li class="rankList" ng-repeat="x in ranklists">
+        <a href='{{"#"+ rank_type[x.billboard.billboard_type]}}'>
+            <img ng-src={{x.billboard.pic_s210}} alt="{{x.billboard.name}}">
+        </a>
+
+        <ol>
+            <li class="clear-fix" ng-repeat="y in x.song_list">
+                <span class="music_name fl" ng-bind="y.title"></span>
+                <span class="artist_name fr" ng-bind="y.artist_name"></span>
+            </li>
+        </ol>
+    </li>
+</ul>

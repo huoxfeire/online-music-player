@@ -1,0 +1,23 @@
+<ol class="data-box">
+    <li class="list-item list-head">
+        <span class="auth-name">歌手</span>
+        <span class="music-album">专辑</span>
+        <span class="music-name">歌曲</span>
+
+
+    </li>
+    <li class="list-item" ng-repeat="song in song_list">
+        <span class="list-num">{{$index+1}}</span>
+
+        <span class="auth-name">{{song.artist_name}}</span>
+        <span class="music-album">{{song.album_title}}</span>
+        <span class="music-name">{{song.title}}
+            <div class="list-menu" data-no="">
+                <span class="list-icon icon-play" title="点击播放这首歌"></span>
+                <span class="list-icon icon-download" title="点击下载这首歌"></span>
+                <span class="list-icon icon-share" title="点击分享这首歌"></span>
+            </div>
+        </span>
+
+    </li>
+</ol>

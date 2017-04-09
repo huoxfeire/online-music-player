@@ -1,0 +1,269 @@
+/*页面构建样式*/
+html,body{
+margin: 0;
+height: 100%;
+}
+
+ul{
+list-style: none;
+padding: 0;
+}
+
+.header-nav{
+position: fixed;
+font-family: Arial;
+width: 100%;
+height: 65px;
+background-color: #7266d2;
+z-index: 999;
+}
+.header-nav a{
+padding-left: 20px;
+font-size: 27px;
+color: rgba(255,255,255,.8);
+font-weight: 100;
+line-height: 65px;
+}
+.header-nav a:hover{
+color: #fff;
+}
+
+.content{
+float: left;
+width: 100%;
+height: 100%;
+margin: 0 auto;
+}
+
+.main{
+height: 100%;
+margin-left: 200px;
+background: #a884cc url("../bg_index_new.jpg") no-repeat 0% 20%;
+background-size: 1000px auto;
+overflow-x: hidden;
+overflow-y: auto;
+box-sizing: border-box;
+padding: 75px 0 90px 10px;
+}
+
+.left_side{
+width:200px;
+height: 100%;
+float: left;
+padding-top: 75px;
+margin-left: -100%;
+background-color: #7e6cd0;
+box-sizing: border-box;
+z-index: 999;
+}
+
+.left_side li{
+padding-left: 30px;
+}
+
+.left_side a{
+display: inline-block;
+width: 100%;
+height: 40px;
+line-height: 40px;
+color: #e0e0e0;
+}
+
+.left_side li:hover{
+background-color: skyblue;
+}
+
+.active{
+background-color: skyblue;
+}
+
+.footer{
+width: 100%;
+height:90px;
+position: fixed;
+padding-left:3%;
+bottom: 0;
+background-color: #c3325f;
+color:rgba(255,255,255,.8);
+}
+
+li.title{
+height: 30px;
+line-height: 30px;
+font-size: 18px;
+border-bottom: 0;
+}
+
+.rankLists{
+font-size: 14px;
+color: #e0e0e0;
+}
+
+.rankLists li.rankList{
+float: left;
+width: 240px;
+height: 220px;
+margin-right: 30px;
+}
+.music_name,.artist_name{
+width:45%;
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+}
+
+.fl{
+float: left;
+}
+.fr{
+float: right;
+}
+/*浮动清除*/
+.clear-fix {
+zoom: 1;
+}
+.clear-fix:before, .clear-fix:after {
+display: table;
+line-height: 0;
+content: "";
+}
+.clear-fix:after {
+clear: both;
+}
+/*歌曲列表样式*/
+.list-head {
+height: 40px;
+}
+
+/* 一项数据 */
+.list-item {
+width: 100%;
+height: 50px;
+line-height: 50px;
+color: rgba(225,225,225,.8);
+font-size: 14px;
+overflow: hidden;
+border-bottom: 1px solid rgba(150,150,150,.5);
+cursor: default;
+}
+
+/* 正在播放的那项 */
+.list-playing {
+color: #fff;
+}
+
+/* 列表数字 */
+.list-num {
+display: block;
+width: 30px;
+text-align: center;
+float: left;
+overflow: hidden;
+}
+/* 正在播放的那项数字 */
+.list-playing .list-num {
+background: url("../images/wave.gif") 10px 20px no-repeat;
+text-indent: -99px;
+}
+
+/* 音乐名字 */
+.music-name {
+position: relative;
+display: block;
+width: auto;
+margin-left: 40px;
+margin-right: 300px;
+height: 100%;
+-webkit-user-select: none;
+-moz-user-select: none; /*禁止双击选定*/
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+/* 鼠标滑过时音乐名字被截断 */
+.music-name-cult {
+display: block;
+word-break: keep-all;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.list-item:hover .music-name-cult {
+padding-right: 150px;
+}
+.list-playing:hover .music-name-cult {
+padding-right: 100px;
+}
+/* 作者名称与音乐专辑 */
+.auth-name,.music-album {
+position: relative;
+display: block;
+width: 150px;
+float: right;
+height: 100%;
+word-break: keep-all;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+/*列表中滑动出现的菜单*/
+.list-menu {
+position: absolute;
+right: 10px;
+top: 50%;
+overflow: hidden;
+font-size: 0;
+height: 36px;
+margin-top: -18px;
+float: right;
+display: none;
+}
+.list-item:hover .list-menu {
+display: block;
+}
+.list-head:hover .list-menu {
+display: none;
+}
+
+/* 列表中滑动出现的小图标 */
+.list-icon {
+display: block;
+width: 36px;
+height: 36px;
+background-image: url("../images/icon_list_menu.png");
+float: left;
+margin-left: 10px;
+cursor: pointer;
+}
+.list-playing .icon-play{
+display: none;
+}
+.icon-play {
+background-position: -80px 0;
+}
+.icon-play:hover {
+background-position: -120px 0;
+}
+.icon-download {
+background-position: -80px -120px;
+}
+.icon-download:hover {
+background-position: -120px -120px;
+}
+.icon-share {
+background-position: -80px -40px;
+}
+.icon-share:hover {
+background-position: -120px -40px;
+}
+
+/* 分享弹窗中的链接框 */
+.share-url {
+width: 100%;
+margin-top: 10px;
+}
+
+/* 列表中可以被点击的横条 */
+.list-clickable {
+cursor: pointer;
+}

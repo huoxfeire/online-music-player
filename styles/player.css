@@ -1,0 +1,118 @@
+/*播放器控制栏样式*/
+div.playControl{
+ float:left;
+ padding: 0 10px;
+ width:20%;
+ height:100%;
+}
+
+.footer button{
+ opacity:.8;
+ filter:alpha(opacity=80);
+}
+
+.footer button:hover{
+ opacity:1;
+ filter:alpha(opacity=80);
+}
+
+div.playControl button{
+ position:relative;
+ outline: none;
+ border: none;
+ width:19px;
+ height: 20px;
+ top:40%;
+ background: url("../images/player.png");
+}
+
+div.playControl .prev{
+ background-position: 0 -30px;
+}
+div.playControl .next{
+ background-position: 0 -51px;
+}
+div.playControl .play,div.playControl .pause{
+
+ width:20px;
+ height:29px;
+ left:50%;
+ margin-left: -28px;
+ margin-top: -5px;
+ }
+div.playControl .pause{
+ background-position: -30px 0;
+}
+
+.progressArea{
+ position:relative;
+ top:15px;
+ float:left;
+ width:50%;
+}
+/*播放器里的当前播放音乐信息*/
+.play_info{
+ height:30px;
+ line-height:30px;
+ width:100%;
+ overflow:hidden;
+}
+.play_info .music_info{ 
+ float:left;
+ height:30px;
+ line-height:30px;
+}
+.play_info .time{
+ float:right;
+ height:30px;
+}
+/*进度条*/
+.progressbar,.progressCover{
+ position: absolute;
+ height: 4px;
+ border-radius: 4px;
+}
+.progressbar{
+ width: 100%;
+ background-color: rgba(0,0,0,0.5);
+}
+.progressCover{
+ width:50px;
+ background-color: rgba(255,255,255,.8);
+}
+.progressCover .dot{
+ float:right;
+ width:12px;
+ height:12px;
+ margin-top:-4px;
+ border-radius:6px;
+ background-color:#ffffff;
+}
+/*音量*/
+.volume{
+ position:relative;
+ float:left;
+ top:35px;
+ width:20%;
+ height:20px;
+ padding-left:30px;
+ box-sizing:border-box;
+}
+.volume button{
+ float: left;
+ width: 25px;
+ height: 25px;
+}
+.volume .notQuiet{
+ background: transparent url("../images/player.png") no-repeat 0 -141px;
+}
+.volume .quiet{
+ background: transparent url("../images/player.png") no-repeat 0 -180px;
+}
+.volume .progressBox{
+ float:left;
+ width:auto;
+ margin-top:10px;
+ padding-left:10px;
+ box-sizing:border-box;
+}

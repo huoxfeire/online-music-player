@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" ng-app="musicApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>music player</title>
+    <!--<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/player.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/angular-route/1.3.13/angular-route.min.js"></script>
+</head>
+<body>
+
+<div class="header-nav">
+    <h2>
+        <a href="#">OnlineMusicPlayer</a>
+    </h2>
+
+</div>
+    <!--三栏式布局播放器-->
+    <div class="content">
+        <div class="main">
+            <ng-view></ng-view>
+
+        </div>
+    </div>
+
+    <div class="left_side">
+
+        <ul>
+            <li class="active">
+                <a href="#/">榜单</a>
+            </li>
+            <li>
+                <a href="#history">历史</a>
+            </li>
+        </ul>
+    </div>
+<!--底部控制栏-->
+    <div class="footer">
+        <!--播放控制-->
+        <div class="playControl">
+            <button class="prev fl"></button>
+            <button class="pause"></button>
+            <button class="next fr"></button>
+        </div>
+        <!--进度条区域-->
+        <div class="progressArea">
+            <div class="play_info">
+                <span class="music_info">musicname</span>
+                <span class="time">current/sum</span>
+            </div>
+            <div class="progressbar"></div>
+            <div class="progressCover">
+                <div class="dot"></div>
+            </div>
+        </div>
+        <!--循环选项-->
+        <!--<div class="playOptions"></div>-->
+        <!--音量-->
+        <div class="volume">
+            <button class="notQuiet"></button>
+            <div class="progressBox">
+                <div class="progressbar"></div>
+                <div class="progressCover">
+                    <div class="dot"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+    <script src="app.js"></script>
+    <!--导入控制器-->
+    <script src="controller/musicList/musicList.js"></script>
+    <script src="controller/history/history.js"></script>
+</body>
+
+</html>

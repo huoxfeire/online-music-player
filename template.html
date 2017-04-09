@@ -1,0 +1,11 @@
+<div>
+    <ul class="music_item">
+        <li class="title">play list</li>
+        <li>歌曲 演唱者</li>
+        <li ng-repeat="x in songs">
+            <h3>{{x.title}}</h3>
+            <h5>{{x.artist_name}}</h5>
+        </li>
+        <img  ng-src={{x.pic_big}} alt="图片加载失败" title={{x.album_title}}>
+    </ul>
+</div>
