@@ -38,7 +38,7 @@ margin: 0 auto;
 .main{
 height: 100%;
 margin-left: 200px;
-background: #a884cc url("../bg_index_new.jpg") no-repeat 0% 20%;
+background: #a884cc url("../images/bg_index_new.jpg") no-repeat 0% 20%;
 background-size: 1000px auto;
 overflow-x: hidden;
 overflow-y: auto;
